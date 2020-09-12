@@ -1,14 +1,15 @@
-$primary: #1696e7;
-$secondary: #4A4A48;
+$primary: #5D2CFF;
+$secondary: #373737;
 $success: #566246;
 $info: #52c8fa;
-$warning: #FE4A49;
 $danger: #FE4A49;
-$light: #f8f9fa;
+$light: #F5F4FA;
 $dark: #464d65;
 $btn-focus-box-shadow: none !important;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rajdhani:wght@700&family=Roboto:wght@300;500;700&display=swap');
 @import '~bootstrap/scss/bootstrap';
 
 * {
@@ -17,12 +18,21 @@ $btn-focus-box-shadow: none !important;
 
 body,
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+.head {
+  font-family: 'Rajdhani', sans-serif;
 }
 
 .no-decoration:hover {
   text-decoration: none !important;
+}
+
+.text-grey {
+  color: #6c757d;
 }
 
 .close {
