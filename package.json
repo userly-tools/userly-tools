@@ -1,16 +1,28 @@
 {
   "name": "research-hub-webapp",
+  "homepage": "https://userly-tools.github.io/research-hub-webapp/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mdi/js": "^5.4.45",
+    "@mdi/react": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.0",
+    "gh-pages": "^2.2.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.3",
+    "reactstrap": "^8.5.1",
+    "styled-components": "^5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
