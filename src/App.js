@@ -1,18 +1,18 @@
 import React from 'react';
 import { HashRouter as DefaultRouter, Switch, Route } from "react-router-dom";
-import Testing from './Testing'
-var createBrowserHistory = require("history").createBrowserHistory;
-const history = createBrowserHistory();
+import ViewFormTesting from './ViewFormTesting'
+import CreateFormTesting from './CreateFormTesting'
 
 const App = () => {
   return (
-    <DefaultRouter history={history}>
+    <DefaultRouter>
       Header
       <hr/>
       <Switch>
         <Route exact path="/" component={() => {return <>Home</>}} />
         <Route exact path="/login" component={() => {return <>Login</>}} />
-        <Route exact path="/testing" component={Testing} />
+        <Route exact path="/view-testing" component={ViewFormTesting} />
+        <Route exact path="/create-testing" component={CreateFormTesting} />
       </Switch>
       <hr/>
       Footer

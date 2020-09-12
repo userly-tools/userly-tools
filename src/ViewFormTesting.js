@@ -16,7 +16,7 @@ const formJson = {
   ]
 }
 
-const Testing = () => {
+const ViewFormTesting = () => {
 
   const [answers, setAnswers] = useState({});
   
@@ -37,4 +37,4 @@ const Testing = () => {
   );
 }
 
-export default Testing;
+export default ViewFormTesting;
