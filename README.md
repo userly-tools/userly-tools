@@ -1,5 +1,6 @@
 # Userly
 
+Tired of using 5 different apps to track, contact, manage and incentivize your user? Look no more.
 A one stop solution for all your user research needs. 
 
 Track survey answers, research history, messages, and incentives—plus any custom fields you add—so you'll know exactly which users to talk to next.
@@ -13,3 +14,6 @@ An open-source alternative to:
 - [try my UI](https://www.trymyui.com/)
 - [Validately](https://validately.com/)
 - [userfeel.com](http://userfeel.com/)
+
+
+Feel free to contribute and suggest features.
