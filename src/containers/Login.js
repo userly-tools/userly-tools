@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { Alert, Button, Col, Container, Input, Row } from 'reactstrap';
 import styled from 'styled-components';
+import CustomNavbar from '../components/CustomNavbar';
 
 const Login = () => {
 
@@ -23,6 +24,8 @@ const Login = () => {
   }
   
   return (
+    <>
+    <CustomNavbar colorV="#F5F4FA" navC="light" pos="top" />
     <Container className="d-flex align-items-center justify-content-center" fluid style={{background: "#F5F4FA", minHeight: "100vh"}}>
       <div className="bg-white rounded-lg shadow-sm p-4 p-md-5">
         <Container style={{minWidth: "40vw"}}>
@@ -50,6 +53,7 @@ const Login = () => {
       </div>
       <CustomAlert color={colorV} className={`font-weight-light mx-3 mb-0  ${colorV === "warning"? "animate__animated animate__fadeInDown animate__faster" : "animate__animated animate__shakeX animate__faster" }`}>Login using these credentials; Email: <b>root@userly.studio</b> Password: <b>superuser</b></CustomAlert>
     </Container>
+    </>
   );
 
 }

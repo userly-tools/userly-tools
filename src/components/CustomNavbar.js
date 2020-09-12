@@ -11,13 +11,12 @@ import {
 import styled from 'styled-components';
 import Logo from '../assets/logo.png'
 
-const CustomNavbar = () => {
+const CustomNavbar = ({colorV, navC, pos}) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <Container fluid style={{background: "#F5F4FA"}}>
-    <Navbar color="light" className="px-0 mt-2 mx-3 px-md-5 pt-md-4 head" light fixed="top" expand="md">
+    <Container fluid className="px-0" style={{background: colorV}}>
+    <Navbar color={navC} className="px-0 mt-2 mx-3 px-md-5 pt-md-4 head" light fixed={pos} expand="md">
         <CustomBrand className="no-decoration font-weight-bold h3 mb-0 d-flex align-items-center justify-content-center" to="/"><img src={Logo} alt="" width={60} />Userly</CustomBrand>
         <NavbarToggler className="no-btn-shadow border-0" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
