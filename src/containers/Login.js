@@ -48,7 +48,7 @@ const Login = () => {
           </Row>
         </Container>
       </div>
-      <CustomAlert color={colorV} className="font-weight-light mx-3 mb-0">Login using these credentials; Email: <b>root@userly.studio</b> Password: <b>superuser</b></CustomAlert>
+      <CustomAlert color={colorV} className={`font-weight-light mx-3 mb-0  ${colorV === "warning"? "animate__animated animate__fadeInDown animate__faster" : "animate__animated animate__shakeX animate__faster" }`}>Login using these credentials; Email: <b>root@userly.studio</b> Password: <b>superuser</b></CustomAlert>
     </Container>
   );
 
