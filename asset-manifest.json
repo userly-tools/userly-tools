@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/research-hub-webapp/static/css/main.3c80d6ab.chunk.css",
+    "main.js": "/research-hub-webapp/static/js/main.f07f5a67.chunk.js",
+    "main.js.map": "/research-hub-webapp/static/js/main.f07f5a67.chunk.js.map",
+    "runtime-main.js": "/research-hub-webapp/static/js/runtime-main.bb4703fc.js",
+    "runtime-main.js.map": "/research-hub-webapp/static/js/runtime-main.bb4703fc.js.map",
+    "static/js/2.ff1d7918.chunk.js": "/research-hub-webapp/static/js/2.ff1d7918.chunk.js",
+    "static/js/2.ff1d7918.chunk.js.map": "/research-hub-webapp/static/js/2.ff1d7918.chunk.js.map",
+    "index.html": "/research-hub-webapp/index.html",
+    "precache-manifest.eee3f52e7225c32f88a9fcc3f64d1c3e.js": "/research-hub-webapp/precache-manifest.eee3f52e7225c32f88a9fcc3f64d1c3e.js",
+    "service-worker.js": "/research-hub-webapp/service-worker.js",
+    "static/css/main.3c80d6ab.chunk.css.map": "/research-hub-webapp/static/css/main.3c80d6ab.chunk.css.map",
+    "static/js/2.ff1d7918.chunk.js.LICENSE.txt": "/research-hub-webapp/static/js/2.ff1d7918.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb4703fc.js",
+    "static/js/2.ff1d7918.chunk.js",
+    "static/css/main.3c80d6ab.chunk.css",
+    "static/js/main.f07f5a67.chunk.js"
+  ]
+}
