@@ -1,30 +1,35 @@
+import { mdiDrag } from '@mdi/js';
+import Icon from '@mdi/react';
 import React from 'react'
-import LongAnswer from './LongAnswer';
-import ShortAnswer from './ShortAnswer'
 
-const renderSwitch = (param, data) => {
+const NewFormType = ({data, setProps}) => {
+
   const {
+    id,
+    type,
     question,
-    index,
-    handleChange,
     options
-  } = data
-  switch(param)
-  {
-    case 'short_ans':
-      return <ShortAnswer question={question} index={index} onChange={handleChange} />
-    case 'long_ans':
-      return <LongAnswer question={question} index={index} onChange={handleChange} />
-    default:
-      return
-  }
-}
+  } = data;
 
-const NewFormType = ({data}) => {
+
+  const changeQuestion =(event) => {
+    setProps(id, {id, type, options, question: event.target.value})
+  }
+
+  const changeType =(event) => {
+    setProps(id, {id, type:event.target.value, options, question})
+  }
 
   return (
-    <div>
-      {data.name}
+    <div className="border">
+      <Icon path={mdiDrag} size={1} color="grey" className="handle" />
+      <label>Question</label>
+      <input value={question} onChange={changeQuestion} />
+      <label>Type:</label>
+      <select onChange={changeType}>
+        <option value="short_ans" defaultValue>Short Answer</option>
+        <option value="long_ans">Long Answer</option>
+      </select>
     </div>
   );
 }

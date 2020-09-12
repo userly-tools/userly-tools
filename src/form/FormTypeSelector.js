@@ -7,6 +7,7 @@ const renderSwitch = (param, data) => {
     question,
     index,
     handleChange,
+    // eslint-disable-next-line no-unused-vars
     options
   } = data
   switch(param)
