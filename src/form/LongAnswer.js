@@ -1,15 +1,15 @@
 import React from 'react'
 
-const LongAnswer = ({question, index, onChange}) => {
+const LongAnswer = ({question, id, onChange, isRequired}) => {
 
   const handleChange = (event) => {
-    onChange(index, event.target.value)
+    onChange(id, event.target.value)
   }
 
   return (
     <div>
       <h3>{question}</h3>
-      <textarea onChange={handleChange} />
+      <textarea required={isRequired} onChange={handleChange} />
     </div>
   );
 }
