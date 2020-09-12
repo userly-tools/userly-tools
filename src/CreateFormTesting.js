@@ -29,6 +29,19 @@ const CreateFormTesting = () => {
     setForm(bForm)
   }
 
+  const deleteForm = (id) => {
+    let bForm = [...form]
+    let i = 0, s = 0;
+    bForm.forEach(element => {
+      if(id === element.id) {
+        s = i;
+      }
+      i++;
+    });
+    bForm.splice(s, 1);
+    setForm(bForm)
+  }
+
   const addForm = () => {
     setForm([...form, {id: form.length, question: "New Question", type: "short_ans"}])
   }
@@ -39,7 +52,7 @@ const CreateFormTesting = () => {
       <button onClick={addForm}><Icon path={mdiPlus} size={1} color="red" /></button>
       <ReactSortable list={form} setList={setForm} handle=".handle" animation={100}>
         {form.map((data) => (
-          <div className="p-3" key={data.id}><NewFormType data={data} setProps={makeChanges} /></div>
+          <div className="p-3" key={data.id}><NewFormType data={data} setProps={makeChanges} deleteForm={deleteForm} /></div>
         ))}
       </ReactSortable>
     </>

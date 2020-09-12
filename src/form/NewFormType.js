@@ -1,8 +1,8 @@
-import { mdiDrag } from '@mdi/js';
+import { mdiClose, mdiDrag, mdiPlus } from '@mdi/js';
 import Icon from '@mdi/react';
 import React from 'react'
 
-const NewFormType = ({data, setProps}) => {
+const NewFormType = ({data, setProps, deleteForm}) => {
 
   const {
     id,
@@ -25,9 +25,43 @@ const NewFormType = ({data, setProps}) => {
     setProps(id, {id, type, options, question, isRequired: event.target.checked})
   }
 
+  const deleteQuestion = () => {
+    deleteForm(id)
+  }
+
+  const addOption = () => {
+    if(options){
+      setProps(id, {id, type, options: [...options, "new option"], question, isRequired})
+    } else {
+      setProps(id, {id, type, options: ["new option"], question, isRequired})
+    }
+  }
+
+  const changeOption = (event) => {
+    let bOptions = [...options]
+    bOptions[event.target.name] = event.target.value
+    setProps(id, {id, type, options: bOptions, question, isRequired})
+  }
+
+  const deleteOption = (toDel) => {
+    let bOptions = [...options]
+    bOptions.splice(toDel, 1)
+    setProps(id, {id, type, options: bOptions, question, isRequired})
+  }
+
   const renderOptions = () => {
     return (
-    <div>Options</div>)
+      <>
+        <div>Options</div>
+        <button onClick={addOption}><Icon path={mdiPlus} size={1} color="green" /></button>
+        {options && options.map((data, index) => (
+          <div key={index}>
+            <input type="text" value={data} onChange={changeOption} name={index}  />
+            <Icon path={mdiClose} size={1} color="red" onClick={() => {deleteOption(index)}} />
+          </div>
+        ))}
+      </>
+    )
   }
 
   return (
@@ -49,6 +83,7 @@ const NewFormType = ({data, setProps}) => {
         <option value="checkbox">Multiple Choice</option>
       </select>
       {type !== "short_ans" && type !== "long_ans" && renderOptions()}
+      <Icon path={mdiClose} size={1} color="red" onClick={deleteQuestion} />
     </div>
   );
 }
