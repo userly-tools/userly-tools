@@ -82,7 +82,10 @@ It is a Free and Open Source alternative to current proprietary solutions out th
       - Researcher ✅
     - REST API with Flask ✅
     - Deploy to Heroku ✅
-
+- Multi Platform 
+  - Desktop Website ✅
+  - PWA for Android and IOS ✅
+  - WebApp for Desktop ✅
 How do you feel we can improve user research logistics? We're open to any feedback.
 
 Feel free to suggest features/challenges. You can drop us an email on [userly.tools@gmail.com](userly.tools@gmail.com) or on [Telegram](https://t.me/rohanrajpal).
