@@ -32,7 +32,7 @@ const ViewProject = () => {
       'Content-Type': 'text/plain',
       'Access-Control-Allow-Origin': '*'
     };
-    axios.get(`http://userly.herokuapp.com/forms/` + formId, headers)
+    axios.get(`https://userly.herokuapp.com/forms/` + formId, headers)
     .then(res => {
       setFormData(JSON.stringify(res.data));
       setfetchedId(res.data.id)

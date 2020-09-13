@@ -32,7 +32,7 @@ const CreateForm = () => {
       'Content-Type': 'text/plain',
       'Access-Control-Allow-Origin': '*'
     };
-    axios.post(`http://userly.herokuapp.com/forms`, data, headers)
+    axios.post(`https://userly.herokuapp.com/forms`, data, headers)
     .then(res => {
       console.log(res)
     })
