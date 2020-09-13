@@ -1,13 +1,17 @@
 <p align="center">
-    <img src="https://i.imgur.com/izJDtLYt.png" alt="Logo" width="160" height="160">
+
+  <img src="https://i.imgur.com/izJDtLYt.png" alt="Logo" width="160" height="160">
 
 <h3 align="center">Userly</h3>
 
-![](https://img.shields.io/github/issues-raw/userly-tools/userly-tools?style=flat-square)
-![](https://img.shields.io/website?url=http://userly.studio/&style=flat-square)
-![](https://img.shields.io/github/languages/count/userly-tools/userly-tools?style=flat-square)
-![](https://img.shields.io/github/languages/code-size/userly-tools/userly-tools?style=flat-square)
-![](https://img.shields.io/github/license/userly-tools/userly-tools?style=flat-square)
+  <img src="https://img.shields.io/github/issues-raw/userly-tools/userly-tools?style=flat-square">
+  <img src="https://img.shields.io/website?url=http://userly.studio/&style=flat-square">
+  <img src="https://img.shields.io/github/languages/count/userly-tools/userly-tools?style=flat-square">
+  <img src="https://img.shields.io/github/languages/code-size/userly-tools/userly-tools?style=flat-square">
+  <img src="https://img.shields.io/github/license/userly-tools/userly-tools?style=flat-square">
+  <img src="https://img.shields.io/github/workflow/status/userly-tools/userly-tools/Build%20and%20Deploy/master?style=flat-square">
+  <img src="https://img.shields.io/github/stars/userly-tools/userly-tools?style=flat-square"> 
+  <img src="https://img.shields.io/github/contributors/userly-tools/userly-tools?style=flat-square">
 
   <p align="center">
     The ultimate user research tool 👐</br>
@@ -21,10 +25,18 @@
 
 The ultimate user research tool for UX designers, Product Managers, Market researchers, Academicians, and executives. 👐
 
-**Stop guessing, start validating** 💡
+## Stop guessing, start validating 💡
 
 Tired of using 5 different apps to track, contact, manage and incentivize your user? Look no more.
 Track survey answers, research history, messages, and incentives—plus any custom fields you add—so you'll know exactly which users to talk to next.
+
+## 🌟 Features
+
+1. Projects
+    - Create projects for each user research you want to do
+    - Manage all of your projects at one place in the dashboard
+2. Forms
+    - Easily create screener surveys with our inbuilt forms
 
 It is a Free and Open Source alternative to current proprietary solutions out there 🚀
 
@@ -36,24 +48,19 @@ It is a Free and Open Source alternative to current proprietary solutions out th
 - [Validately](https://validately.com/)
 - [userfeel.com](http://userfeel.com/)
 
-**Tech stack**
+## Tech stack
 
-- Flask
+- Backend: Flask and SQLite
 - Frontend: React, Bootstrap, and some NPM packages
-- SQLite
-
-**Hosting and Deployment**
-
-- GH-pages for web app 
-- Heroku for REST API 
-- docker for self-hosting
-
-**Languages**
-- Python
-- Javascript
-- CSS
-- HTML5
-- JSX
+- Hosting and Deployment
+  - GH-pages for web app 
+  - Heroku for REST API
+- Languages
+  - Python
+  - Javascript
+  - CSS
+  - HTML5
+  - JSX
 
 ## Planned Features
 
