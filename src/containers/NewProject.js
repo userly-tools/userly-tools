@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { Container, Row, Col, Nav, NavItem, TabContent, TabPane } from 'reactstrap';
 import Dashboard from './Dashboard'
+import CreateForm from './CreateForm'
 
 const NewProjectContainer = () => {
   
@@ -16,10 +17,7 @@ const NewProjectContainer = () => {
 }
 
 const navLinks = [
-  "SETUP PROJECT",
-  "OPT-IN FORM",
-  "SCREENER",
-  "PUBLISH"
+  "CREATE PROJECT",
 ]
 
 const NewProject = () => {
@@ -37,7 +35,7 @@ const NewProject = () => {
     <Container className="px-4" fluid>
       <div className="px-3 pt-3">
         <Row className="pt-3">
-          <Col className="p-0 px-md-3" xs={1}>
+          <Col className="px-md-3" xs={1}>
             <Icon path={mdiArrowLeft} size={2} color="#5D2CFF" onClick={() => {history.push("/projects")}} />
           </Col>
           <Col xs={12} md={11} className="d-flex w-100">
@@ -55,19 +53,10 @@ const NewProject = () => {
               ))}
             </Nav>
           </Col>
-          <Col xs={12} md={{offset: 1, size: 12}} className="mt-4">
+          <Col xs={12} md={{offset: 1, size: 11}} className="mt-4 px-0">
           <TabContent activeTab={(activeTab+1).toString()}>
               <TabPane tabId="1">
-                as1 
-              </TabPane>
-              <TabPane tabId="2">
-                asf2
-              </TabPane>
-              <TabPane tabId="3">
-                asf3
-              </TabPane>
-              <TabPane tabId="4">
-                asf4
+                <CreateForm />
               </TabPane>
             </TabContent>
           </Col>

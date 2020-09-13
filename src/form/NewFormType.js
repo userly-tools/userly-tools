@@ -1,6 +1,7 @@
-import { mdiClose, mdiDrag, mdiPlus } from '@mdi/js';
+import {   mdiChevronDown, mdiChevronUp, mdiClose,  mdiDragHorizontal, mdiPlus } from '@mdi/js';
 import Icon from '@mdi/react';
 import React from 'react'
+import { Button, Col, FormGroup, Input, Label, Row } from 'reactstrap';
 
 const NewFormType = ({data, setProps, deleteForm}) => {
 
@@ -31,9 +32,9 @@ const NewFormType = ({data, setProps, deleteForm}) => {
 
   const addOption = () => {
     if(options){
-      setProps(id, {id, type, options: [...options, "new option"], question, isRequired})
+      setProps(id, {id, type, options: [...options, ""], question, isRequired})
     } else {
-      setProps(id, {id, type, options: ["new option"], question, isRequired})
+      setProps(id, {id, type, options: [""], question, isRequired})
     }
   }
 
@@ -51,39 +52,60 @@ const NewFormType = ({data, setProps, deleteForm}) => {
 
   const renderOptions = () => {
     return (
-      <>
-        <div>Options</div>
-        <button onClick={addOption}><Icon path={mdiPlus} size={1} color="green" /></button>
+      <div className="mt-3">
+        <Label className="small mb-0">Options</Label>
         {options && options.map((data, index) => (
-          <div key={index}>
-            <input type="text" value={data} onChange={changeOption} name={index}  />
-            <Icon path={mdiClose} size={1} color="red" onClick={() => {deleteOption(index)}} />
-          </div>
+          <Row className="mb-2" key={index}>
+            <Col>
+              <Input type="text" value={data} placeholder="Your option here" onChange={changeOption} name={index}  />
+            </Col>
+            <Col xs="auto" className="d-flex align-items-center justify-content-center px-0">
+              <Icon path={mdiClose} size={1} color="red" onClick={() => {deleteOption(index)}} />
+            </Col>
+          </Row>
         ))}
-      </>
+        <div className="small my-1" >
+          <Button onClick={addOption} outline color="red" style={{fontSize: '0.7rem'}} className="d-flex align-items-center border-success text-success" size="sm"><Icon path={mdiPlus} size={0.6} /> Add an Option</Button>
+        </div>
+      </div>
     )
   }
 
   return (
-    <div className="border">
-      <Icon path={mdiDrag} size={1} color="grey" className="handle" />
-      <label>Question</label>
-      <input value={question} onChange={changeQuestion} />
-      {(type === "short_ans" || type === "long_ans") && 
-        <>
-          <label>Is Required?</label>
-          <input type="checkbox" checked={isRequired} onChange={changeRequired} />
-        </>
-      }
-      <br/>
-      <label>Type:</label>
-      <select onChange={changeType}>
-        <option value="short_ans" defaultValue>Short Answer</option>
-        <option value="long_ans">Long Answer</option>
-        <option value="checkbox">Multiple Choice</option>
-      </select>
-      {type !== "short_ans" && type !== "long_ans" && renderOptions()}
-      <Icon path={mdiClose} size={1} color="red" onClick={deleteQuestion} />
+    <div className="rounded p-3" style={{border: "1px dashed rgb(93, 44, 255, 0.5)"}}>
+      <Row>
+        <Col md="auto" >
+          <div className="d-flex flex-column align-items-center handle">
+            <Icon path={mdiChevronUp} size={1.2} color="rgb(93, 44, 255, 0.8)" className="hoverPointer d-none d-md-block" />
+            <Icon path={mdiDragHorizontal} size={1.2} color="rgb(93, 44, 255, 0.8)" className="hoverPointer" style={{transform: "translateY(-50%)"}} />
+            <Icon path={mdiChevronDown} size={1.2} color="rgb(93, 44, 255, 0.8)" className="hoverPointer d-none d-md-block"style={{transform: "translateY(-100%)"}}  />
+          </div>
+        </Col>
+        <Col>
+          <FormGroup>
+            <Label className="mb-0 small">Question</Label>
+            <Input value={question} placeholder="Enter your question" onChange={changeQuestion} />
+          </FormGroup>
+          <Row>
+            <Col xs={12} md="auto">
+              <Label className="mb-0 small">Type</Label>
+              <Input type="select" onChange={changeType} className="border-primary pl-4">    
+                <option value="short_ans" defaultValue>Short Answer</option>
+                <option value="long_ans">Long Answer</option>
+                <option value="checkbox">Multiple Choice</option>
+              </Input>
+            </Col>
+          </Row>
+          {type !== "short_ans" && type !== "long_ans" && renderOptions()}
+          {(type === "short_ans" || type === "long_ans") && 
+            <div className="pl-4 mt-3">
+              <Input type="checkbox" checked={isRequired} onChange={changeRequired} className="border-primary" /> <Label className="mb-0 small">Is Required?</Label>
+            </div>}
+        </Col>
+        <Col md="auto" className="text-right">
+          <Icon path={mdiClose} size={1.2} color="red"  onClick={deleteQuestion} className="hoverPointer" />
+        </Col>
+      </Row>
     </div>
   );
 }
