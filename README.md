@@ -19,9 +19,6 @@ It is a Free and Open Source alternative to current proprietary solutions out th
 - [Validately](https://validately.com/)
 - [userfeel.com](http://userfeel.com/)
 
--  [Chekout our repo](https://github.com/userly-tools/userly-webapp)
-- [Our Github board](https://github.com/userly-tools/userly-webapp/projects/1)
-
 **Tech stack**
 
 - Flask
