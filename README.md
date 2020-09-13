@@ -1,7 +1,13 @@
 <p align="center">
     <img src="https://i.imgur.com/izJDtLYt.png" alt="Logo" width="160" height="160">
-    
+
 <h3 align="center">Userly</h3>
+
+![](https://img.shields.io/github/issues-raw/userly-tools/userly-tools?style=flat-square)
+![](https://img.shields.io/website?url=http://userly.studio/&style=flat-square)
+![](https://img.shields.io/github/languages/count/userly-tools/userly-tools?style=flat-square)
+![](https://img.shields.io/github/languages/code-size/userly-tools/userly-tools?style=flat-square)
+![](https://img.shields.io/github/license/userly-tools/userly-tools?style=flat-square)
 
   <p align="center">
     The ultimate user research tool 👐</br>
