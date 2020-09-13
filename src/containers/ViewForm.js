@@ -3,6 +3,7 @@ import { Button, Container, Input, Label } from 'reactstrap';
 import CustomNavbar from '../components/CustomNavbar';
 import FormTypeSelector from '../form/FormTypeSelector';
 import axios from 'axios'
+import { useHistory } from 'react-router-dom';
 
 const ViewForm = () => {
 
@@ -11,7 +12,7 @@ const ViewForm = () => {
   const [errorID, setErrorId] = useState(false)
 
   const formId = window.location.href.split("/").pop();
-
+const history = useHistory();
   useEffect(() => {
     const headers = {
       'Content-Type': 'text/plain',
@@ -32,7 +33,22 @@ const ViewForm = () => {
   
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(answers, fill)
+    const headers = {
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin': '*'
+    };
+    var responses = []
+    axios.get(`https://userly.herokuapp.com/forms/${formId}`, headers)
+    .then(res => {
+      responses = [...JSON.parse(res.data.responses), {user: fill, data: answers}]
+      var data = {
+        responses: JSON.stringify(responses)
+      }
+      axios.patch(`https://userly.herokuapp.com/forms/${formId}`, data, headers)
+      .then(res => {
+        history.push("/")
+      })
+    })
   }
 
   const handleChange = (index, value) => {
