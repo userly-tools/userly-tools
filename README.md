@@ -1,4 +1,15 @@
-![image](https://i.imgur.com/izJDtLYt.png) 
+<p align="center">
+    <img src="https://i.imgur.com/izJDtLYt.png" alt="Logo" width="160" height="160">
+    
+<h3 align="center">Userly</h3>
+
+  <p align="center">
+    The ultimate user research tool 👐</br>
+    <a href="https://github.com/userly-tools/userly-tools/issues">Report Bug</a>
+    .
+    <a href="https://github.com/userly-tools/userly-tools/issues">Request Feature</a>
+  </p>
+</p>  
 
 **Focus on your users & leave the logistics to us** 😃
 
@@ -38,7 +49,7 @@ It is a Free and Open Source alternative to current proprietary solutions out th
 - HTML5
 - JSX
 
-**Planned Features**
+## Planned Features
 
 - The main dashboard that has
     - list of all participants 
