@@ -1,12 +1,16 @@
-# Research Hub Webapp
+![image](https://i.imgur.com/izJDtLYt.png) 
+
+**Focus on your users & leave the logistics to us** 😃
+
+The ultimate user research tool for UX designers, Product Managers, Market researchers, Academicians, and executives. 👐
+
+**Stop guessing, start validating** 💡
 
 Tired of using 5 different apps to track, contact, manage and incentivize your user? Look no more.
-A one stop solution for all your user research needs. 
-
 Track survey answers, research history, messages, and incentives—plus any custom fields you add—so you'll know exactly which users to talk to next.
 
-There are user research tools out there, but none of them are FOSS or open-source.
-An open-source alternative to:
+It is a Free and Open Source alternative to current proprietary solutions out there 🚀
+
 - [User Interviews](https://www.userinterviews.com/research-hub)
 - [User Testing](https://www.usertesting.com/)
 - [UsabilityHub](https://usabilityhub.com/)
@@ -15,74 +19,54 @@ An open-source alternative to:
 - [Validately](https://validately.com/)
 - [userfeel.com](http://userfeel.com/)
 
+-  [Chekout our repo](https://github.com/userly-tools/userly-webapp)
+- [Our Github board](https://github.com/userly-tools/userly-webapp/projects/1)
 
-Feel free to contribute and suggest features.
+**Tech stack**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Flask
+- Frontend: React, Bootstrap, and some NPM packages
+- SQLite
 
-## Available Scripts
+**Hosting and Deployment**
 
-In the project directory, you can run:
+- GH-pages for web app 
+- Heroku for REST API 
+- docker for self-hosting
 
-### `yarn start`
+**Languages**
+- Python
+- Javascript
+- CSS
+- HTML5
+- JSX
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Planned Features**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- The main dashboard that has
+    - list of all participants 
+    - list of projects ✅
+- For any project dashboard
+    - project overview ✅
+    - list of users
+    - screener survey ✅
+    - collaborators
+    - incentive
+- Project creation UI
+    - Setup project
+    - Screener ✅
+    - Schedule
+    - Review and send!
+- Backend
+    - SQLite Database ✅
+      - Forms ✅
+      - FormObjects ✅
+      - Researcher ✅
+    - REST API with Flask ✅
+    - Deploy to Heroku ✅
 
-### `yarn test`
+How do you feel we can improve user research logistics? We're open to any feedback.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Feel free to suggest features/challenges. You can drop us an email on [userly.tools@gmail.com](userly.tools@gmail.com) or on [Telegram](https://t.me/rohanrajpal).
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Userly_team](https://i.imgur.com/MDe9yKH.png)
