@@ -1,6 +1,5 @@
 ![image](https://i.imgur.com/izJDtLYt.png) 
 
-**Userly**
 **Focus on your users & leave the logistics to us** 😃
 
 The ultimate user research tool for UX designers, Product Managers, Market researchers, Academicians, and executives. 👐
