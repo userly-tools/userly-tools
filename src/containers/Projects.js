@@ -1,6 +1,7 @@
-import { mdiBellOutline, mdiMagnify, mdiPlus, mdiSearchWeb, mdiStar } from '@mdi/js';
+import { mdiBellOutline, mdiMagnify, mdiPlus, mdiStar } from '@mdi/js';
 import Icon from '@mdi/react';
 import React from 'react'
+import { useHistory } from 'react-router-dom';
 import { Container, Row, Col, Input, Button, Progress } from 'reactstrap';
 import Dashboard from './Dashboard'
 
@@ -16,6 +17,7 @@ const ProjectContainer = () => {
 
 const projectsData = [
   {
+    id: 1,
     title: "App Redesign",
     desc: "Web and desktop app",
     participants: 15,
@@ -23,6 +25,7 @@ const projectsData = [
     incentive: "40 via UPI",
     progress: 58
   }, {
+    id: 1,
     title: "App Redesign",
     desc: "Web and desktop app",
     participants: 15,
@@ -30,6 +33,7 @@ const projectsData = [
     incentive: "40 via UPI",
     progress: 58
   }, {
+    id: 1,
     title: "App Redesign",
     desc: "Web and desktop app",
     participants: 15,
@@ -37,6 +41,7 @@ const projectsData = [
     incentive: "40 via UPI",
     progress: 58
   }, {
+    id: 1,
     title: "App Redesign",
     desc: "Web and desktop app",
     participants: 15,
@@ -44,6 +49,7 @@ const projectsData = [
     incentive: "40 via UPI",
     progress: 58
   }, {
+    id: 1,
     title: "App Redesign",
     desc: "Web and desktop app",
     participants: 15,
@@ -51,6 +57,15 @@ const projectsData = [
     incentive: "40 via UPI",
     progress: 58
   }, {
+    id: 1,
+    title: "App Redesign",
+    desc: "Web and desktop app",
+    participants: 15,
+    tag: "#1on1",
+    incentive: "40 via UPI",
+    progress: 58
+  }, {
+    id: 1,
     title: "App Redesign",
     desc: "Web and desktop app",
     participants: 15,
@@ -61,6 +76,13 @@ const projectsData = [
 ]
 
 const Project = () => {
+
+  const history = useHistory();
+
+  const openProject = (id) => {
+    console.log(id)
+  }
+
   return (
     
     <Container className="px-4" fluid>
@@ -84,13 +106,13 @@ const Project = () => {
           <Button size="sm" className="rounded-pill my-1 my-md-0 px-4 py-0 small mr-auto" outline color="primary">Unmoderated Task</Button>
         </div>
         <Row className="mt-5">
-          <Col className="mb-4 hoverPointer" xs={12} md={6} lg={3}>
+          <Col className="mb-4 hoverPointer" onClick={() => {history.push("/new-project")}} xs={12} md={6} lg={3}>
             <div className="bg-primary  shadow-sm d-flex align-items-center justify-content-center" style={{height: "250px", borderRadius: "1.5rem"}}>
               <Icon path={mdiPlus} size={4} color="white" />
             </div>
           </Col>
           {projectsData.map((data, i) => (
-            <Col className="mb-4 hoverPointer" key={i} xs={12} md={6} lg={3}>
+            <Col className="mb-4 hoverPointer" onClick={() => {openProject(data.id)}} key={i} xs={12} md={6} lg={3}>
               <div className="bg-white  shadow-sm" style={{height: "250px", borderRadius: "1.5rem", position: "relative", overflow: "hidden"}}>
                 <div className="px-4 pt-4">
                   <h5 className="d-flex">{data.title} <Icon  path={mdiStar} className="ml-auto" color="#5D2CFF" size={1.2} /></h5>

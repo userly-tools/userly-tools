@@ -54,7 +54,7 @@ const Sidebar = ({activeTab}) => {
           <img src={User} width="35%" alt="" />
           <div className="head small text-uppercase">
             <p className="mb-0 text-secondary" style={{opacity: "0.5"}}>Logged in as</p>
-            <p className="text-secondary h4 mb-2">Royal T.</p>
+            <p className="text-secondary h4 mb-2">John D.</p>
           </div>
         </div>
         <SideTab img={mdiCog} text="SETTINGS" next="#" />
