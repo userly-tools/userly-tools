@@ -33,7 +33,11 @@ const Project = () => {
   const history = useHistory();
 
   useEffect(() => {
-    axios.get(`http://userly.herokuapp.com/projects/rohanraj`)
+    const headers = {
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin': '*'
+    };
+    axios.get(`http://userly.herokuapp.com/projects/rohanraj`, headers)
     .then(res => {
       console.log(res)
     })

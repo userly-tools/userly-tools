@@ -31,7 +31,7 @@ const formJson = {
   ]
 }
 
-const ViewFormTesting = () => {
+const ViewForm = () => {
 
 
   const formId = window.location.href.split("/").pop();
@@ -85,4 +85,4 @@ const ViewFormTesting = () => {
 
 }
 
-export default ViewFormTesting;
+export default ViewForm;
