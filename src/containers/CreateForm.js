@@ -2,11 +2,14 @@ import { mdiPlus } from '@mdi/js';
 import Icon from '@mdi/react';
 import axios from 'axios';
 import React, {  useState } from 'react'
+import { useHistory } from 'react-router-dom';
 import { ReactSortable } from "react-sortablejs";
 import { Button, Col, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText, Label, Row } from 'reactstrap';
 import NewFormType from '../form/NewFormType'
 
 const CreateForm = () => {
+
+  const history = useHistory();
 
   const [form, setForm] = useState([{
     id: 0,
@@ -23,18 +26,29 @@ const CreateForm = () => {
   
   const publishForm = (event) => {
     event.preventDefault();
+    var formBack = []
+    form.forEach(element => {
+      formBack.push({
+        ...element,
+        is_required: element.isRequired ? 1 : 0,
+        options: element.options ? element.options : null
+      })
+    });
     var data = {
-      ...project, 
-      components: form
-    }
-    console.log(data)
+      "title": project.projtit,
+      "desc": project.projdesc,
+      "tag": project.projtype,
+      "incentive": project.projamount,
+      "person_uname": "admin",
+      "components": formBack
+   }
     const headers = {
       'Content-Type': 'text/plain',
       'Access-Control-Allow-Origin': '*'
     };
     axios.post(`https://userly.herokuapp.com/forms`, data, headers)
     .then(res => {
-      console.log(res)
+      history.push("/projects")
     })
   }
 

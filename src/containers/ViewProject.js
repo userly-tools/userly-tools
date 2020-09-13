@@ -48,7 +48,14 @@ const ViewProject = () => {
   }
 
   const deleteProject = () => {
-    console.log("Delete", formId)
+    const headers = {
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin': '*'
+    };
+    axios.delete(`https://userly.herokuapp.com/forms/${formId}`, headers)
+    .then(res => {
+      history.push("/projects")
+    })
   }
 
   return (

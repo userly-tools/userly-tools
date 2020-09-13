@@ -14,18 +14,17 @@ const renderSwitch = (param, data) => {
   switch(param)
   {
     case 'short_ans':
-      return <ShortAnswer id={id} question={question} isRequired={isRequired} onChange={handleChange} />
+      return <ShortAnswer id={id} question={question} isRequired={JSON.parse(isRequired)} onChange={handleChange} />
     case 'long_ans':
-      return <LongAnswer id={id} question={question} isRequired={isRequired} onChange={handleChange} />
+      return <LongAnswer id={id} question={question} isRequired={JSON.parse(isRequired)} onChange={handleChange} />
     case 'checkbox':
-      return <CheckboxAnswer id={id} question={question} options={options} onChange={handleChange} />
+      return <CheckboxAnswer id={id} question={question} options={JSON.parse(options)} onChange={handleChange} />
     default:
       return
   }
 }
 
 const FormTypeSelector = ({data}) => {
-
   return (
     <>
       {renderSwitch(data.type, data)}

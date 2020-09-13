@@ -26,7 +26,7 @@ const Project = () => {
       'Content-Type': 'text/plain',
       'Access-Control-Allow-Origin': '*'
     };
-    axios.get(`https://userly.herokuapp.com/projects/rohanraj`, headers)
+    axios.get(`https://userly.herokuapp.com/projects/admin`, headers)
     .then(res => {
       var finalData = []
       res.data.forEach(element => {
