@@ -4,7 +4,7 @@
 
 <h3 align="center">Userly</h3>
 
-  <p align="center"><img src="https://img.shields.io/github/issues-raw/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/website?url=http://userly.studio/&style=flat-square"> <img src="https://img.shields.io/github/languages/count/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/languages/code-size/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/license/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/workflow/status/userly-tools/userly-tools/Build%20and%20Deploy/master?style=flat-square"> <img src="https://img.shields.io/github/stars/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/contributors/userly-tools/userly-tools?style=flat-square"></p>
+  <p align="center"><img src="https://img.shields.io/github/issues-raw/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/website?url=http://userly.studio/&style=flat-square"> <img src="https://img.shields.io/github/languages/count/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/languages/code-size/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/workflow/status/userly-tools/userly-tools/Build%20and%20Deploy/master?style=flat-square"> <img src="https://img.shields.io/github/stars/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/contributors/userly-tools/userly-tools?style=flat-square"> <img src="https://img.shields.io/github/license/userly-tools/userly-tools?style=flat-square"></p>
 
   <p align="center">
     The ultimate user research tool 👐</br>
