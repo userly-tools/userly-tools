@@ -35,6 +35,12 @@ Track survey answers, research history, messages, and incentives—plus any cust
 2. Forms
     - Easily create screener surveys with our inbuilt forms
 
+## Demo
+
+- Create a form on our [Website](https://userly.studio/#/)
+- Checkout our [YoutTube Video](https://youtu.be/tMrbMLENUHA).
+- Try out our UI on [Adobe XD](https://xd.adobe.com/view/41982235-1229-4cd3-a03f-a4a8f39fc08f-14cb/?fullscreen).
+
 It is a Free and Open Source alternative to current proprietary solutions out there 🚀
 
 - [User Interviews](https://www.userinterviews.com/research-hub)
