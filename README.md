@@ -8,6 +8,8 @@
 
   <p align="center">
     The ultimate user research tool 👐</br>
+    <a href="http://userly.studio/">Website</a>
+    .
     <a href="https://github.com/userly-tools/userly-tools/issues">Report Bug</a>
     .
     <a href="https://github.com/userly-tools/userly-tools/issues">Request Feature</a>
@@ -22,6 +24,8 @@ The ultimate user research tool for UX designers, Product Managers, Market resea
 
 Tired of using 5 different apps to track, contact, manage and incentivize your user? Look no more.
 Track survey answers, research history, messages, and incentives—plus any custom fields you add—so you'll know exactly which users to talk to next.
+
+<img src="https://i.imgur.com/Q0oReYF.gif" width="100%" />
 
 ## 🌟 Features
 
