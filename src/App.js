@@ -5,6 +5,7 @@ import Login from './containers/Login'
 import Home from './containers/Home'
 import ProjectContainer from './containers/Projects'
 import NewProjectContainer from './containers/NewProject'
+import ViewProjectContainer from './containers/ViewProject'
 import ParticipantsContainer from './containers/Participants'
 import CalendarContainer from './containers/Calendar'
 
@@ -15,6 +16,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={ProjectContainer} />
         <Route exact path="/new-project" component={NewProjectContainer} />
+        <Route exact path="/view-project/:formId" component={ViewProjectContainer} />
         <Route exact path="/participants" component={ParticipantsContainer} />
         <Route exact path="/calendar" component={CalendarContainer} />
         <Route exact path="/login" component={Login} />

@@ -1,5 +1,6 @@
 import { mdiPlus } from '@mdi/js';
 import Icon from '@mdi/react';
+import axios from 'axios';
 import React, {  useState } from 'react'
 import { ReactSortable } from "react-sortablejs";
 import { Button, Col, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText, Label, Row } from 'reactstrap';
@@ -20,8 +21,21 @@ const CreateForm = () => {
     projamount: 0
   });
   
-  const publishForm = () => {
-    console.log(form, project)
+  const publishForm = (event) => {
+    event.preventDefault();
+    var data = {
+      ...project, 
+      components: form
+    }
+    console.log(data)
+    const headers = {
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin': '*'
+    };
+    axios.post(`http://userly.herokuapp.com/forms`, data, headers)
+    .then(res => {
+      console.log(res)
+    })
   }
 
   const makeChanges = (id, data) => {
@@ -60,7 +74,7 @@ const CreateForm = () => {
 
   return (
     <>
-        <Form>
+        <Form onSubmit={publishForm}>
 
       <div className="px-3">
         <FormGroup>
@@ -107,7 +121,7 @@ const CreateForm = () => {
         <Button onClick={addForm} outline color="red" className="d-flex align-items-center justify-content-center border-success mx-auto small text-success" size="sm"><Icon path={mdiPlus} size={1} /> Add a Question</Button>
       </div>
       <div className="text-right px-3 mt-3 mb-5">
-        <Button outline type="submit" color="primary" onClick={publishForm} size="lg">Publish</Button>
+        <Button outline type="submit" color="primary" size="lg">Publish</Button>
       </div>
       </Form>
     </>

@@ -45,7 +45,7 @@ const Project = () => {
   }, [])
 
   const openProject = (id) => {
-    console.log(id)
+    history.push("/view-project/" + id)
   }
 
   return (
