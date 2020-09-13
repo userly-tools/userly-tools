@@ -24,6 +24,7 @@ const ViewProject = () => {
 
   const history = useHistory();
   const [formData, setFormData] = useState("")
+  const [fetchedId, setfetchedId] = useState(null)
   const formId = window.location.href.split("/").pop();
 
   useEffect(() => {
@@ -34,8 +35,10 @@ const ViewProject = () => {
     axios.get(`http://userly.herokuapp.com/forms/` + formId, headers)
     .then(res => {
       setFormData(JSON.stringify(res.data));
+      setfetchedId(res.data.id)
     }).catch(err => {
       setFormData("No Such Project Id.")
+      setfetchedId(null)
     })
   }, [formId])
   const [activeTab, setActiveTab] = useState(0);
@@ -77,8 +80,10 @@ const ViewProject = () => {
           <Col xs={12} md={{offset: 1, size: 11}} className="mt-4 px-0">
           <TabContent activeTab={(activeTab+1).toString()}>
               <TabPane tabId="1">
-                <p className="font-weight-light px-3">Show Responese Here, Object fetched using API...</p>
-                {formData}
+                {fetchedId && <div className="px-3 mb-5"><h5 className="mb-0">Share this link to fill form:</h5>
+                <a href={`http://userly.studio/#/fill/${fetchedId}`}>http://userly.studio/#/fill/{fetchedId}</a></div>}
+                <p className="font-weight-light px-3 ">Create UI for this tab, Object fetched using API...</p>
+                <p className="font-weight-light px-3">{formData}</p>
               </TabPane>
             </TabContent>
           </Col>
