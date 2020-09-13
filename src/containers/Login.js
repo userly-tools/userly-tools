@@ -14,7 +14,7 @@ const Login = () => {
   const loginUser = (event) => {
     event.preventDefault();
     if(data.email === "root@userly.studio" && data.pass === "superuser") 
-      history.push("/dashboard")
+      history.push("/projects")
     else
       setColorV("danger")
   }

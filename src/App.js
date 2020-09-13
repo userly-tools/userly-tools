@@ -4,13 +4,18 @@ import ViewFormTesting from './ViewFormTesting'
 import CreateFormTesting from './CreateFormTesting'
 import Login from './containers/Login'
 import Home from './containers/Home'
+import ProjectContainer from './containers/Projects'
+import ParticipantsContainer from './containers/Participants'
+import CalendarContainer from './containers/Calendar'
 
 const App = () => {
   return (
     <DefaultRouter>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/dashboard" component={() => {return <div style={{position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}>Dashboard in progress...</div>}} />
+        <Route exact path="/projects" component={ProjectContainer} />
+        <Route exact path="/participants" component={ParticipantsContainer} />
+        <Route exact path="/calendar" component={CalendarContainer} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/view-testing" component={ViewFormTesting} />
         <Route exact path="/create-testing" component={CreateFormTesting} />
