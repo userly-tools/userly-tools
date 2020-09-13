@@ -8,7 +8,7 @@ const Dashboard = ({pass, activeTab}) => {
 
   return (
       <Container fluid>
-        <Row style={{minHeight: '100vh'}} className="py-3">
+        <Row style={{minHeight: '100vh', overflow: "hidden"}} className="py-3">
           <Col xs={12} md={2}>      
             <Sidebar activeTab={activeTab} />
           </Col>
