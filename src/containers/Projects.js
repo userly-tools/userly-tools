@@ -1,6 +1,6 @@
 import { mdiBellOutline, mdiMagnify, mdiPlus, mdiStar } from '@mdi/js';
 import Icon from '@mdi/react';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { Container, Row, Col, Input, Button, Progress } from 'reactstrap';
 import Dashboard from './Dashboard'
@@ -16,21 +16,10 @@ const ProjectContainer = () => {
 
 }
 
-const projectsData = [
-  {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
-  }, 
-]
-
 const Project = () => {
 
   const history = useHistory();
+  const [projectsData, setProjectsData] = useState([]);
 
   useEffect(() => {
     const headers = {
@@ -39,7 +28,19 @@ const Project = () => {
     };
     axios.get(`http://userly.herokuapp.com/projects/rohanraj`, headers)
     .then(res => {
-      console.log(res)
+      var finalData = []
+      res.data.forEach(element => {
+        finalData.push({
+          id: element.id,
+          title: element.title,
+          desc: element.desc,
+          participants: element.num_participants,
+          tag: element.tag,
+          incentive: element.incentive,
+          progress: element.progress 
+        })
+      });
+      setProjectsData(finalData);
     })
   }, [])
 
