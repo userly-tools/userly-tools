@@ -1,7 +1,6 @@
 import React from 'react';
 import { HashRouter as DefaultRouter, Switch, Route } from "react-router-dom";
-import ViewFormTesting from './ViewFormTesting'
-import CreateFormTesting from './CreateFormTesting'
+import ViewForm from './containers/ViewForm'
 import Login from './containers/Login'
 import Home from './containers/Home'
 import ProjectContainer from './containers/Projects'
@@ -19,8 +18,7 @@ const App = () => {
         <Route exact path="/participants" component={ParticipantsContainer} />
         <Route exact path="/calendar" component={CalendarContainer} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/view-testing" component={ViewFormTesting} />
-        <Route exact path="/create-testing" component={CreateFormTesting} />
+        <Route exact path="/fill/:formId" component={ViewForm} />
       </Switch>
     </DefaultRouter>
   );

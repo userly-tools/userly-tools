@@ -1,9 +1,10 @@
 import { mdiBellOutline, mdiMagnify, mdiPlus, mdiStar } from '@mdi/js';
 import Icon from '@mdi/react';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import { Container, Row, Col, Input, Button, Progress } from 'reactstrap';
 import Dashboard from './Dashboard'
+import axios from 'axios'
 
 const ProjectContainer = () => {
   
@@ -24,60 +25,19 @@ const projectsData = [
     tag: "#1on1",
     incentive: "40 via UPI",
     progress: 58
-  }, {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
-  }, {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
-  }, {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
-  }, {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
-  }, {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
-  }, {
-    id: 1,
-    title: "App Redesign",
-    desc: "Web and desktop app",
-    participants: 15,
-    tag: "#1on1",
-    incentive: "40 via UPI",
-    progress: 58
   }, 
 ]
 
 const Project = () => {
 
   const history = useHistory();
+
+  useEffect(() => {
+    axios.get(`http://userly.herokuapp.com/projects/rohanraj`)
+    .then(res => {
+      console.log(res)
+    })
+  }, [])
 
   const openProject = (id) => {
     console.log(id)

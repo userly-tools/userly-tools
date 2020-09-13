@@ -9,7 +9,7 @@ const CreateForm = () => {
 
   const [form, setForm] = useState([{
     id: 0,
-    type: "checkbox",
+    type: "short_ans",
   }]);
 
   const [project, setProject] = useState({
