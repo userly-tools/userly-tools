@@ -58,7 +58,7 @@ const NewProject = () => {
           <Col xs={12} md={{offset: 1, size: 12}} className="mt-4">
           <TabContent activeTab={(activeTab+1).toString()}>
               <TabPane tabId="1">
-                as1
+                as1 
               </TabPane>
               <TabPane tabId="2">
                 asf2
