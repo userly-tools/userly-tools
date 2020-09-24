@@ -16,6 +16,9 @@
   </p>
 </p>  
 
+**We won a commendation prize in FOSS hack India 2020**
+https://forum.fossunited.org/t/foss-hack-2020-results/424**
+
 **Focus on your users & leave the logistics to us** 😃
 
 The ultimate user research tool for UX designers, Product Managers, Market researchers, Academicians, and executives. 👐
